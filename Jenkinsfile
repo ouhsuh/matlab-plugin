@@ -8,5 +8,8 @@ pipeline {
                 }
             }
         }
+        steps {
+ 
+        }
     }
 }
