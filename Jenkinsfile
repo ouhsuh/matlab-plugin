@@ -9,6 +9,7 @@ pipeline {
             }
             steps {
                 echo "matlab starts"
+                start /wait matlab -nodesktop -nosplash -minimize -wait -r "disp('Hello World!');exit"
             }
         }
 
