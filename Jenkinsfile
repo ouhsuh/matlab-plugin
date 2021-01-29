@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo "matlab starts"
                 sh 'python_version=`which python`'
-                echo $python_version
+                echo "$python_version"
                 
             }
         }
