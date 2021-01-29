@@ -11,7 +11,7 @@ pipeline {
                 //sh "python_version=`which python`"
                 //sh "python3_version=`which python3`"
                 //sh "matlab_version=`which matlab`“
-                sh mat_to_py_compile
+                sh "/.mat_to_py_compile"
                 stash(name: 'compiled-results', includes: '$test_folder/*')
                 //sh "matlab -nodesktop -nosplash -logfile matlab_debug.log -r 'pyenv;disp(ans);cd;exit'"
             }
