@@ -1,0 +1,6 @@
+#!/bin/sh
+
+py_fname='jenkins_test'
+mat_fname='jenkins_test.m'
+test_folder='test_samples'
+mcc -W python:$py_fname $mat_fname -d $test_folder
