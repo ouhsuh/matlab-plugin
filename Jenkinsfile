@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "matlab starts"
-                sh 'python_version=`which python`'
+                python_version=`which python`
                 echo "$python_version"
                 
             }
