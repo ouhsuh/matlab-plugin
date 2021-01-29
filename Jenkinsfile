@@ -1,9 +1,9 @@
 pipeline {
     agent any 
+    environment {
+        PATH = "/Appliations/MATLAB_R2019b.app/bin:${env.PATH}"
+    }
     stages {
-        environment {
-            PATH = "/Appliations/MATLAB_R2019b.app/bin:${env.PATH}"
-        }
         stage('Build') { 
             steps {
                 echo "matlab starts"
