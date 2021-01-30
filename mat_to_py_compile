@@ -1,5 +1,9 @@
 #!/bin/sh
 
+###Function: Scan for every .m file in specific folder, and compile them one by one
+
+
+
 py_fname='jenkins_test'
 mat_fname='jenkins_test.m'
 test_folder='test_samples'
