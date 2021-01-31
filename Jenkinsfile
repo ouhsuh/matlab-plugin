@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-        PATH = "/Applications/MATLAB_R2019b.app/bin:${env.PATH}"
+        PATH = "/Users/weiyangge/opt/miniconda3/bin/:/Applications/MATLAB_R2019b.app/bin:${env.PATH}"
     }
     stages {
         stage('Build') { 
@@ -9,7 +9,7 @@ pipeline {
                 echo "matlab starts"
                 //sh "printenv"
                 //sh "python_version=`which python`"
-                //sh "python3_version=`which python3`"
+                sh "python3_version=`which python3`"
                 //sh "matlab_version=`which matlab`“
                 sh "mwpython_version=`which mwpython`"
                 sh "chmod a+x mat_to_py_compile"
@@ -26,6 +26,7 @@ pipeline {
             //}
             steps {
                 sh 'conda activate python3.7'
+                sh 'python3_version=`which python3`'
                 sh 'python3 test_samples/setup.py install'
                 sh 'conda deactivate'
                 //sh 'mwpython test_add_array_by_binary.py'
