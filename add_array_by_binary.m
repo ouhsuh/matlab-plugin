@@ -7,7 +7,7 @@ global count
 
 count = count + 1;
 
-# A, B is the row and column number of input matrix
+%% row_number_count, col_number_count is the row and column number of input matrix
 fid=fopen(file_path,'rb');
     if(fid>0)
         [data_array,data_count]=fread(fid,[row_number_count,col_number_count],'float64');
