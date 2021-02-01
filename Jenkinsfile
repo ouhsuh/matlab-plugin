@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-        PATH = "/Users/weiyangge/opt/miniconda3/bin/:/Applications/MATLAB_R2019b.app/bin:/usr/local/bin:${env.PATH}"
+        PATH = "/Applications/MATLAB_R2019b.app/bin:/usr/local/bin:${env.PATH}"
     }
     stages {
         stage('Build') { 
@@ -26,8 +26,10 @@ pipeline {
                 }
             }
             steps {
-                sh 'python3_version=`which python3`'
-                sh 'mwpython_version=`which mwpython`'
+                sh 'python3_version=`python3 --version`'
+                sh 'python3_path=`which python3`'
+                sh 'printenv'
+                //sh 'mwpython_version=`which mwpython`'
                 sh 'chmod a+x py_package_install'
                 sh './py_package_install'
             }
