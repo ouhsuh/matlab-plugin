@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-        PATH = "/Users/weiyangge/opt/miniconda3/bin/:/Applications/MATLAB_R2019b.app/bin:${env.PATH}"
+        PATH = "/Users/weiyangge/opt/miniconda3/bin/:/Applications/MATLAB_R2019b.app/bin:/usr/local/bin:${env.PATH}"
     }
     stages {
         stage('Build') { 
