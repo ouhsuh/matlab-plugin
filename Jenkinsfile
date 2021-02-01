@@ -9,7 +9,7 @@ pipeline {
                 echo "matlab starts"
                 sh 'printenv'
                 //sh "python_version=`which python`"
-                //sh "python3_version=`which python3`"
+                sh "python3_version=`which python3`"
                 //sh "matlab_version=`which matlab`“
                 sh "mwpython_version=`which mwpython`"
                 sh "chmod a+x mat_to_py_compile"
