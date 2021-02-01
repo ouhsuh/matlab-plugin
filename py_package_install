@@ -2,6 +2,7 @@
 
 ### To install compiled python package and do unit test
 ##conda activate python3.7
+cd test_samples
 dir
 python3_version=`which python3`
 echo $python3_version
