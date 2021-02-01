@@ -26,12 +26,12 @@ pipeline {
                 ///}
             ///}
             steps {
-                //sh 'conda activate python3.7'
-                sh 'unset PYTHONHOME'
-                sh 'unset PYTHONPATH'
+                sh 'conda activate python3.7'
+                //sh 'unset PYTHONHOME'
+                //sh 'unset PYTHONPATH'
                 sh 'python3_version=`which python3`'
                 sh 'python3 test_samples/setup.py install'
-                //sh 'conda deactivate'
+                sh 'conda deactivate'
                 //sh 'mwpython test_add_array_by_binary.py'
             }
         }
