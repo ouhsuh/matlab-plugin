@@ -20,11 +20,11 @@ pipeline {
         }
         stage('Test') {
             ///
-            agent {
-                docker {
-                    image 'python:3.7.9'
-                }
-            }
+            //agent {
+                //docker {
+                    //image 'python:3.7.9'
+                //}
+            //}
             steps {
                 sh 'python3_version=`python3 --version`'
                 sh 'python3_path=`which python3`'
