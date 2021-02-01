@@ -24,7 +24,7 @@ pipeline {
                 docker {
                     image 'python:3.7.9-slim'
                 }
-            ///}
+            }
             steps {
                 sh 'chmod a+x py_package_install'
                 sh './py_package_install'
