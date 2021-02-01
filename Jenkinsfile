@@ -26,6 +26,8 @@ pipeline {
                 }
             }
             steps {
+                sh 'python3_version=`which python3`'
+                sh 'mwpython_version=`which mwpython`'
                 sh 'chmod a+x py_package_install'
                 sh './py_package_install'
             }
