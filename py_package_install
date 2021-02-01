@@ -3,6 +3,7 @@
 ### To install compiled python package and do unit test
 ##conda activate python3.7
 python3_version=`which python3`
+echo $python3_version
 python3 test_samples/setup.py install
 ##conda deactivate
 ## mwpython test_add_array_by_binaty.py
