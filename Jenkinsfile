@@ -22,7 +22,7 @@ pipeline {
             ///
             agent {
                 docker {
-                    image 'python:3.7.9-slim'
+                    image 'python:3.8.7-slim'
                 }
             }
             steps {
