@@ -25,7 +25,6 @@ pipeline {
                     ///image 'qnib/pytest'
                 ///}
             ///}
-            '''
             steps {
                 //sh 'conda activate python3.7'
                 sh 'python3_version=`which python3`'
