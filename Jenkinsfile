@@ -32,6 +32,7 @@ pipeline {
                 //sh 'mwpython_version=`which mwpython`'
                 sh 'chmod a+x py_package_install'
                 sh './py_package_install'
+                sh 'python3 test_add_array.py'
             }
         }
     }
