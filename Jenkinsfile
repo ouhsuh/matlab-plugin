@@ -15,8 +15,8 @@ pipeline {
                 //sh "matlab_version=`which matlab`“
                 sh "mwpython_version=`which mwpython`"
                 sh "chmod a+x mat_to_py_compile"
-                sh "./mat_to_py_compile"
-                stash(name: 'compiled-results', includes: 'test_samples/*')
+                //sh "./mat_to_py_compile"
+                //stash(name: 'compiled-results', includes: 'test_samples/*')
                 //sh "matlab -nodesktop -nosplash -logfile matlab_debug.log -r 'pyenv;disp(ans);cd;exit'"
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh 'python3_version=`python3 --version`'
                 sh 'python3_path=`which python3`'
-                //sh 'printenv'
+                sh 'printenv'
                 sh 'mwpython_version=`which mwpython`'
                 unstash 'compiled-results'
                 sh 'chmod a+x py_package_install'
