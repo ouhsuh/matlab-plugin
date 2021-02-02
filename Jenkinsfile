@@ -20,17 +20,18 @@ pipeline {
             }
         }
         stage('Test') {
-            ///
-            //agent {
-                //docker {
-                    //image 'python:3.7.9'
-                //}
-            //}
+            
+            agent {
+                docker {
+                    image 'python:3.7.9'
+                }
+            }
             steps {
                 sh 'python3_version=`python3 --version`'
                 sh 'python3_path=`which python3`'
-                sh 'printenv'
+                //sh 'printenv'
                 //sh 'mwpython_version=`which mwpython`'
+                unstash 'compiled-results'
                 sh 'chmod a+x py_package_install'
                 sh './py_package_install'
             }
