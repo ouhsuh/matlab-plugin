@@ -1,9 +1,9 @@
 pipeline {
     agent any 
-    //environment {
-        //PATH = "/Applications/MATLAB_R2019b.app/bin:/usr/local/bin:${env.PATH}"
+    environment {
+        PATH = "/Applications/MATLAB_R2019b.app/bin:/usr/local/bin:${env.PATH}"
         //DYLD_LIBRARY_PATH = "/Applications/MATLAB/MATLAB_Runtime/v97/runtime/maci64:/Applications/MATLAB/MATLAB_Runtime/v97/sys/os/maci64:MR/v97/bin/maci64"
-    //}
+    }
     stages {
         stage('Build') { 
             steps {
@@ -24,14 +24,14 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.7.9'
-                    args '-u root'
+                    args '-u root -v /Applications/MATLAB:/Applications/MATLAB'
                 }
             }
             steps {
                 sh 'python3_version=`python3 --version`'
                 sh 'python3_path=`which python3`'
                 //sh 'printenv'
-                //sh 'mwpython_version=`which mwpython`'
+                sh 'mwpython_version=`which mwpython`'
                 unstash 'compiled-results'
                 sh 'chmod a+x py_package_install'
                 sh './py_package_install'
