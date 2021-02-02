@@ -28,6 +28,9 @@ pipeline {
                     args '-u root -v /Applications/MATLAB:/Applications/MATLAB'
                 }
             }
+            environment {
+                PATH = "/Applications/MATLAB/MATLAB_Runtime/v97/bin:${env.PATH}"
+            }
             steps {
                 sh 'python3_version=`python3 --version`'
                 sh 'python3_path=`which python3`'
