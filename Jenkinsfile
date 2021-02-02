@@ -2,6 +2,7 @@ pipeline {
     agent any 
     environment {
         PATH = "/Applications/MATLAB_R2019b.app/bin:/usr/local/bin:${env.PATH}"
+        DYLD_LIBRARY_PATH = "/Applications/MATLAB/MATLAB_Runtime/v97/runtime/maci64:/Applications/MATLAB/MATLAB_Runtime/v97/sys/os/maci64:MR/v97/bin/maci64"
     }
     stages {
         stage('Build') { 
