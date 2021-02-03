@@ -34,6 +34,8 @@ pipeline {
             steps {
                 sh 'python3_version=`python3 --version`'
                 sh 'python3_path=`which python3`'
+                echo ${env.PATH}
+                sh 'env.PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:${env.PATH}'
                 sh 'export PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:${env.PATH}'
                 sh 'printenv'
                 sh 'mwpython_version=`which mwpython`'
