@@ -12,20 +12,18 @@ root_path=`pwd`
 cd test_samples
 ##python3 test_samples/setup.py install
 python3 setup.py install
-cd
-cd python_packages
 
-pip3 install six-1.15.0-py2.py3-none-any.whl
-pip3 install python_dateutil-2.8.1-py2.py3-none-any.whl 
-pip3 install pytz-2020.4-py2.py3-none-any.whl
-pip3 install numpy-1.19.4-cp37-cp37m-macosx_10_9_x86_64.whl
-pip3 install pandas-1.1.5-cp37-cp37m-macosx_10_9_x86_64.whl
-pip3 install pyobjc_core-7.0.1-cp37-cp37m-macosx_10_9_x86_64.whl
-pip3 install pyobjc_framework_Cocoa-7.0.1-cp37-cp37m-macosx_10_9_x86_64.whl
-pip3 install scipy-1.5.4-cp37-cp37m-macosx_10_9_x86_64.whl
 
-cd
-cd test_samples
+pip3 install /python_packages/six-1.15.0-py2.py3-none-any.whl
+pip3 install /python_packages/python_dateutil-2.8.1-py2.py3-none-any.whl 
+pip3 install /python_packages/pytz-2020.4-py2.py3-none-any.whl
+pip3 install /python_packages/numpy-1.19.4-cp37-cp37m-macosx_10_9_x86_64.whl
+pip3 install /python_packages/pandas-1.1.5-cp37-cp37m-macosx_10_9_x86_64.whl
+pip3 install /python_packages/pyobjc_core-7.0.1-cp37-cp37m-macosx_10_9_x86_64.whl
+pip3 install /python_packages/pyobjc_framework_Cocoa-7.0.1-cp37-cp37m-macosx_10_9_x86_64.whl
+pip3 install /python_packages/scipy-1.5.4-cp37-cp37m-macosx_10_9_x86_64.whl
+
+
 mwpython test_add_array.py
 ##conda deactivate
 ## mwpython test_add_array_by_binaty.py
