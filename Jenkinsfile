@@ -25,7 +25,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.7.9'
-                    args '-u root -v /Applications/MATLAB:/Applications/MATLAB -e /Applications/MATLAB/MATLAB_Runtime/v97/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+                    args '-u root -v /Applications/MATLAB:/Applications/MATLAB -e PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
                 }
             }
             environment {
