@@ -15,7 +15,7 @@ cd test_samples
 python3 setup.py install
 
 
-
+'''
 ##TODO: Try prepare environment with all dependency packages installed
 pip3 install $root_path/python_packages/six-1.15.0-py2.py3-none-any.whl
 pip3 install $root_path/python_packages/python_dateutil-2.8.1-py2.py3-none-any.whl 
@@ -30,6 +30,38 @@ pip3 install pyobjc-core
 pip3 install pyobjc
 ##pip3 install $root_path/python_packages/scipy-1.5.4-cp37-cp37m-macosx_10_9_x86_64.whl
 pip3 install scipy
+'''
+
+
+cd $root_path/Applications
+ls
+echo "   \n\r"
+cd MATLAB
+ls
+echo "   \n\r"
+cd MATLAB_Runtime
+ls
+echo "   \n\r"
+cd v97
+ls
+echo "   \n\r"
+cd bin
+ls
+echo "   \n\r"
+cd maci64
+ls
+echo "   \n\r"
+cd mwpython3.7.app
+ls
+echo "   \n\r"
+cd Contents
+ls
+echo "   \n\r"
+cd MacOS
+ls
+echo "   \n\r"
+
+
 
 
 
