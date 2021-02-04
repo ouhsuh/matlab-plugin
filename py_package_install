@@ -18,9 +18,7 @@ python3 setup.py install
 
 env
 
-$PYTHONHOME
-
-cd /Library
+cd
 ls
 
 ##TODO: Try prepare environment with all dependency packages installed
