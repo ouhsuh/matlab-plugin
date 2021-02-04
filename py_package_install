@@ -16,11 +16,6 @@ cd test_samples
 ##python3 test_samples/setup.py install
 python3 setup.py install
 
-env
-
-cd
-ls
-
 ##TODO: Try prepare environment with all dependency packages installed
 pip3 install $root_path/python_packages/six-1.15.0-py2.py3-none-any.whl
 pip3 install $root_path/python_packages/python_dateutil-2.8.1-py2.py3-none-any.whl 
