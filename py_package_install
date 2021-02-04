@@ -35,7 +35,7 @@ pip3 install scipy
 '''
 
 
-cd $root_path/Applications
+cd /Applications
 ls
 echo "   \n\r"
 cd MATLAB
