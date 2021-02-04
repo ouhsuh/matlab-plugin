@@ -25,7 +25,7 @@ pipeline {
             agent {
                 docker {
                     image 'python:3.7.9'
-                    args '-u root -v /Applications/MATLAB:/Applications/MATLAB -e PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+                    args '-u root -v /Applications/MATLAB:/Applications/MATLAB /Library/Frameworks/Python.framework/Versions/3.7:/Library/Frameworks/Python.framework/Versions/3.7 -e PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin PYTHONHOME=/Library/Frameworks/Python.framework/Versions/3.7'
                 }
             }
             //environment {
@@ -36,7 +36,7 @@ pipeline {
                 //sh 'python3_path=`which python3`'
                 //sh 'PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:$PATH'
                 //sh 'export PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:${env.PATH}'
-                //sh 'printenv'
+                sh 'printenv'
                 //sh 'mwpython_version=`which mwpython`'
                 unstash 'compiled-results'
                 sh 'chmod a+x py_package_install'
