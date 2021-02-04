@@ -10,6 +10,8 @@
 ##env
 root_path=`pwd`
 ##echo $root_path
+ls
+
 cd test_samples
 ##python3 test_samples/setup.py install
 python3 setup.py install
