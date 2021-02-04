@@ -14,11 +14,9 @@ cd test_samples
 ##python3 test_samples/setup.py install
 python3 setup.py install
 
--e "$root_path/Applications/MATLAB/MATLAB_Runtime/v97/bin//maci64/mwpython3.7.app/Contents/MacOS/mwpython3.7"
+test -e "$root_path/Applications/MATLAB/MATLAB_Runtime/v97/bin//maci64/mwpython3.7.app/Contents/MacOS/mwpython3.7"
 
--e
-
-which -e
+test -e $root_path/Applications/MATLAB/MATLAB_Runtime/v97/bin//maci64/mwpython3.7.app/Contents/MacOS/mwpython3.7
 
 if [-e $root_path/Applications/MATLAB/MATLAB_Runtime/v97/bin//maci64/mwpython3.7.app/Contents/MacOS/mwpython3.7]; then
 echo "mwpython3.7 exists"
