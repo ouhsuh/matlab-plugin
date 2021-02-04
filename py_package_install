@@ -29,6 +29,9 @@ pip3 install pyobjc
 ##pip3 install $root_path/python_packages/scipy-1.5.4-cp37-cp37m-macosx_10_9_x86_64.whl
 pip3 install scipy
 
+if [-e $root_path/Applications/MATLAB/MATLAB_Runtime/v97/bin//maci64/mwpython3.7.app/Contents/MacOS/mwpython3.7]; then
+echo "mwpython3.7 exists"
+fi
 
 mwpython test_add_array.py
 ##conda deactivate
