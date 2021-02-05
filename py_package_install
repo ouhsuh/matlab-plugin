@@ -15,6 +15,7 @@ ls /usr/local/lib/python3.7/site-packages
 
 cd test_samples
 ##python3 test_samples/setup.py install
+##"python3 setup.py install" must be run with relative path, cannot use absolute path such as /test_samples/setup.py
 python3 setup.py install
 
 ##TODO: Try prepare environment with all dependency packages installed
