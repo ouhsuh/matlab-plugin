@@ -31,8 +31,8 @@ pip3 install $root_path/python_packages/pyobjc_core-7.0.1-cp37-cp37m-macosx_10_9
 pip3 install $root_path/python_packages/pyobjc_framework_Cocoa-7.0.1-cp37-cp37m-macosx_10_9_x86_64.whl
 ##pip3 install pyobjc-framework-Cocoa
 ##pip3 install $root_path/python_packages/pyobjc-framework-Cocoa-7.1.tar
-pip3 install $root_path/python_packages/scipy-1.5.4-cp37-cp37m-macosx_10_9_x86_64.whl
-##pip3 install scipy
+##pip3 install $root_path/python_packages/scipy-1.5.4-cp37-cp37m-macosx_10_9_x86_64.whl
+pip3 install scipy
 
 
 
