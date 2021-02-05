@@ -22,13 +22,13 @@ pipeline {
         }
         stage('Test') {
             
-            agent {
+            //agent {
                 //docker {
                     //image 'python:3.7.9'
                     //args '-u root -v /Applications/MATLAB:/Applications/MATLAB -v /Library/Frameworks/Python.framework/Versions/3.7:/Library/Frameworks/Python.framework/Versions/3.7 -e PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -e PYTHONHOME=/Library/Frameworks/Python.framework/Versions/3.7'
                     //args '-u root -v /Applications/MATLAB:/Applications/MATLAB -e PATH=/Applications/MATLAB/MATLAB_Runtime/v97/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
                 //}
-            }
+            //}
             //environment {
                 //PATH = "/Applications/MATLAB/MATLAB_Runtime/v97/bin:${env.PATH}"
             //}
