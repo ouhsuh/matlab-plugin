@@ -1,8 +1,5 @@
 #!/bin/sh
 
-###Function: Scan for every .m file in specific folder, and compile them one by one
-
-
 
 py_fname='add_array_by_binary'
 mat_fname='add_array_by_binary.m'
